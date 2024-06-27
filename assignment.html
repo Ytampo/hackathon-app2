@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="img/logo-fire.jpg">
+    <title>単位危機管理</title>
+    <!-- デバイス表示領域の設定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- 他ファイルリンク -->
+    <link rel="stylesheet" href="assign-style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="script" href="no-scroll.js">
+</head>
+
+<body>
+    <div class="space"></div> <!-- 画面上部の余白 -->
+    <h1>課題登録</h1>
+    <div class="reg-assignment">
+        <p>課題の名前</p>
+        <div class="assign-name"><input type="text" name="assign-name" placeholder="課題の名前を入力"></div>
+        <p>日付</p>
+        <div class="day-limit">
+            <input type="text" id="datepicker">
+            <!-- flatpickr JS -->
+            <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+            <script>
+                // flatpickrを初期化
+                flatpickr("#datepicker", {
+                    dateFormat: "Y-m-d", // 日付のフォーマットを指定
+                });
+            </script>
+        </div>
+        <p>時刻</p>
+        <div class="time-limit"><input type="time" name="assign-name"></div>
+        <p>優先順位</p>
+        <div class="rating">
+            <select name="rating" id="rating">
+                <option>★★★★★</option>
+                <option>★★★★</option>
+                <option>★★★</option>
+                <option>★★</option>
+                <option>★</option>
+            </select>
+        </div>
+        <div class="add-btn-div"><button id="add-button">追加</button></div>
+    </div>
+    <div class="foot-space"></div>
+    <footer> <!-- 画面下部タブバー -->
+        <div class="footer-item">
+            <a href="assignment.html"><img class="footer-logo" src="img/reg-assignment-logo.png"></a>
+        </div>
+        <div class="footer-item">
+            <a href="index.html"><img class="footer-logo" src="img/home-logo.png"></a>
+        </div>
+        <div class="footer-item">
+            <a href="timeschedule.html"><img class="footer-logo" src="img/time-logo.png"></a>
+        </div>
+    </footer>
+    <div id="app">
+    </div>
+    <script>
+        // service workerの登録関係
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js').then(reg => {
+                console.log('サービスワーカーを登録しました', reg);
+            }).catch(err => {
+                console.log('登録失敗', err);
+            });
+        }
+    </script>
+</body>
+
+</html>

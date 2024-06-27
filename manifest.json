@@ -1,0 +1,34 @@
+{
+    "name": "単位危機管理",
+    "categories": ["education", "utilities", "social"],
+    "short_name": "単位危機",
+    "description": "あなたの単位取得に危機感を持たせます。",
+    "icons": [
+        {
+            "src": "img/logo-fire-512.jpg",
+            "sizes": "512x512",
+            "type": "image/jpg"
+        },
+        {
+            "src": "img/logo-fire-128.jpg",
+            "sizes": "128x128",
+            "type": "image/jpg"
+        },
+        {
+            "src": "img/logo-fire-48.jpg",
+            "sizes": "48x48",
+            "type": "image/jpg"
+        },
+        {
+            "src": "img/logo-fire-16.jpg",
+            "sizes": "16x16",
+            "type": "image/jpg"
+        }
+    ],
+    "start_url": "https://ytampo.github.io/hackathon-app2/index.html",
+    "scope": "https://ytampo.github.io/hackathon-app2/",
+    "display": "standalone",
+    "theme_color": "#85023e",
+    "orientation": "portrait-primary",
+    "background_color": "#ffffff"
+}
